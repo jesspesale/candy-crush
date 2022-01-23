@@ -33,8 +33,10 @@ const  App = () => {
   // the empty array makes it so the effect will only run once after state changes
 
   return (
-    <div className="App">
-      Hi
+    <div className="app">
+      <div className="game">
+
+      </div>
     </div>
   );
 }
