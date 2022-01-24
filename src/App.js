@@ -14,10 +14,12 @@ const candyColors = [
 const  App = () => {
 
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
+  const [squareBeingDragged, setSquareBeingDragged] = useState(null)
+  const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
 
 
   const checkForColumnOfFour = () => {
-    for(let i = 0; i < 39; i++){
+    for(let i = 0; i <= 39; i++){
       const columnOfFour = [i, i + width, i + width * 2, i + width * 3]
       const decidedColor = currentColorArrangement[i]
 
@@ -45,7 +47,7 @@ const  App = () => {
     }
 
   const checkForColumnOfThree = () => {
-    for(let i = 0; i < 47; i++){
+    for(let i = 0; i <= 47; i++){
       const columnOfThree = [i, i + width, i + width * 2]
       const decidedColor = currentColorArrangement[i]
 
@@ -73,7 +75,7 @@ const  App = () => {
     }
 
     const moveIntoSquareBelow = () => {
-      for(let i =0; i < 64 - width; i++){
+      for(let i =0; i <= 55; i++){
 
         const firstRow = [0,1,2,3,4,5,6,7]
         const isFirstRow = firstRow.includes(i)
@@ -91,6 +93,19 @@ const  App = () => {
       }
     }
 
+    const dragStart = (e) => {
+      console.log(e.target)
+      setSquareBeingDragged(e.target)
+    }
+
+    const dragDrop = (e) => {
+      console.log(e.target)
+      setSquareBeingReplaced(e.target)
+    }
+
+    const dragEnd = (e) => {
+      console.log(e.target)
+    }
 
   const createBoard = () => {
     const randomColorArrangement = []
@@ -124,7 +139,7 @@ const  App = () => {
   }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
 
 
-  console.log(currentColorArrangement)
+  // console.log(currentColorArrangement)
 
 
   return (
@@ -137,9 +152,12 @@ const  App = () => {
             alt={candyColor}
             data-id={index}
             draggable={true}
+            onDragStart={dragStart}
             onDragOver={(e) => e.preventDefault()}
             onDragEnter={(e) => e.preventDefault()}
             onDragLeave={(e) => e.preventDefault()}
+            onDrop={dragDrop}
+            onDragEnd={dragEnd}
           />
         ))}
 
