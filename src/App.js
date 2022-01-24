@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react"
+import blueMnm from "./images/blue_mnm.png"
+import redMnm from "./images/red_mnm.png"
+import orangeMnm from "./images/orange_mnm.png"
+import yellowMnm from "./images/yellow_mnm.png"
+import pinkMnm from "./images/pink_mnm.png"
+import greenMnm from "./images/green_mnm.png"
+import blank from "./images/blank.png"
 
 const width = 8
 
 const candyColors = [
-  "blue", 
-  "green", 
-  "orange",
-  "purple",
-  "red",
-  "yellow"
+  blueMnm, 
+  redMnm, 
+  orangeMnm,
+  yellowMnm,
+  pinkMnm,
+  greenMnm
 ]
 
 const  App = () => {
@@ -108,9 +115,6 @@ const  App = () => {
 
       const squareBeingReplacedId = parseInt(squareBeingReplaced.getAttribute('data-id'))
       const squareBeingDraggedId = parseInt(squareBeingDragged.getAttribute('data-id'))
-
-      console.log(squareBeingReplacedId, "replaced" )
-      console.log(squareBeingDraggedId, "Dragged")
 
       currentColorArrangement[squareBeingReplacedId] = squareBeingDragged.style.backgroundColor
       currentColorArrangement[squareBeingDraggedId] = squareBeingReplaced.style.backgroundColor
