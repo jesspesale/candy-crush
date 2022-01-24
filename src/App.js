@@ -111,6 +111,10 @@ const  App = () => {
 
       console.log(squareBeingReplacedId, "replaced" )
       console.log(squareBeingDraggedId, "Dragged")
+
+      currentColorArrangement[squareBeingReplacedId] = squareBeingDragged.style.backgroundColor
+      currentColorArrangement[squareBeingDraggedId] = squareBeingReplaced.style.backgroundColor
+
     }
 
   const createBoard = () => {
