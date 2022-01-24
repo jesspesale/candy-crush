@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react"
-import Scoreboard from "./componenets/Scoreboard"
-import Game from "./componenets/Game"
-import blueMnm from "./images/blue_mnm.png"
-import redMnm from "./images/red_mnm.png"
-import orangeMnm from "./images/orange_mnm.png"
-import yellowMnm from "./images/yellow_mnm.png"
-import pinkMnm from "./images/pink_mnm.png"
-import greenMnm from "./images/green_mnm.png"
-import blank from "./images/blank.png"
+import blueMnm from "../images/blue_mnm.png"
+import redMnm from "../images/red_mnm.png"
+import orangeMnm from "../images/orange_mnm.png"
+import yellowMnm from "../images/yellow_mnm.png"
+import pinkMnm from "../images/pink_mnm.png"
+import greenMnm from "../images/green_mnm.png"
+import blank from "../images/blank.png"
 
 const width = 8
 
@@ -20,8 +18,7 @@ const candyColors = [
   greenMnm
 ]
 
-const  App = () => {
-
+const Game = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
   const [squareBeingDragged, setSquareBeingDragged] = useState(null)
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
@@ -188,14 +185,9 @@ const  App = () => {
     return () => clearInterval(timer)
   }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
 
-
-  // console.log(currentColorArrangement)
-
-
   return (
-    <div className="app">
-      {/* <div className="game">
-        {currentColorArrangement.map((candyColor, index) => (
+      <div className="game">
+         {currentColorArrangement.map((candyColor, index) => (
           <img
             key={index}
             src={candyColor}
@@ -209,13 +201,10 @@ const  App = () => {
             onDrop={dragDrop}
             onDragEnd={dragEnd}
           />
-        ))}
+        ))} 
+      </div>
+  )
 
-      </div> */}
-      <Game />
-      <Scoreboard score={score}/>
-    </div>
-  );
 }
 
-export default App;
+export default Game
