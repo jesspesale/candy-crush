@@ -23,6 +23,7 @@ const  App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
   const [squareBeingDragged, setSquareBeingDragged] = useState(null)
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
+  const [score, setScore] = useState(0)
 
 
   const checkForColumnOfFour = () => {
@@ -31,11 +32,13 @@ const  App = () => {
       const decidedColor = currentColorArrangement[i]
 
       if(columnOfFour.every(square => currentColorArrangement[square] === decidedColor)){
+        setScore((score) => score + 4)
           columnOfFour.forEach(square => currentColorArrangement[square] = blank)
           return true
       }
     }
   }
+  console.log(score)
 
     const checkForRowOfFour = () => {
       for(let i = 0; i < 64; i++){
@@ -47,6 +50,7 @@ const  App = () => {
           //if in our loop we hit a not valid number just continue
         
         if(rowOfFour.every(square => currentColorArrangement[square] === decidedColor)){
+            setScore((score) => score + 4)
             rowOfFour.forEach(square => currentColorArrangement[square] = blank)
             return true
         }
@@ -59,6 +63,7 @@ const  App = () => {
       const decidedColor = currentColorArrangement[i]
 
       if(columnOfThree.every(square => currentColorArrangement[square] === decidedColor)){
+        setScore((score) => score + 3)
         // checking if 3 columns in a row are the same color as the first one checked
           columnOfThree.forEach(square => currentColorArrangement[square] = blank)
           return true
@@ -76,6 +81,7 @@ const  App = () => {
           //if in our loop we hit a not valid number just continue
         
         if(rowOfThree.every(square => currentColorArrangement[square] === decidedColor)){
+          setScore((score) => score + 3)
           // checking if 3 columns in a row are the same color as the first one checked
             rowOfThree.forEach(square => currentColorArrangement[square] = blank)
             return true
