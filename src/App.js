@@ -13,18 +13,20 @@ const candyColors = [
 
 const  App = () => {
 
-  const [currentColorArangement, setCurrentColorArangement] = useState([])
+  const [currentColorArrangement, setCurrentColorArrangement] = useState([])
 
   const createBoard = () => {
-    const randomeColorArangement = []
+
+    const randomColorArrangement = []
+
     for(let i = 0; i < width * width; i++){
       const randomNumber = Math.floor(Math.random() * candyColors.length)
       // floor for rounded up on numbers, choose a random number that is 1-8
       const randomColor = candyColors[randomNumber]
-        randomeColorArangement.push(randomColor)
+        randomColorArrangement.push(randomColor)
     }
-    setCurrentColorArangement(randomeColorArangement)
-    console.log(currentColorArangement)
+    setCurrentColorArrangement(randomColorArrangement)
+    
   }
 
   useEffect(() => {
@@ -32,9 +34,14 @@ const  App = () => {
   }, [])
   // the empty array makes it so the effect will only run once after state changes
 
+
+  console.log(currentColorArrangement)
+
+
   return (
-    <div className="app">
+    <div className="App">
       <div className="game">
+        
 
       </div>
     </div>
