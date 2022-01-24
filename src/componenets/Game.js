@@ -59,7 +59,7 @@ const Game = () => {
         }
       }
     }
-console.log(turns)
+    
   const checkForColumnOfThree = () => {
     for(let i = 0; i <= 47; i++){
       const columnOfThree = [i, i + width, i + width * 2]
@@ -205,7 +205,7 @@ console.log(turns)
             onDragEnd={dragEnd}
           />
         ))} 
-        {turns}
+        {/* {console.log(score)} */}
         <Scoreboard score={score} turns={turns}/>
       </div>
   )

@@ -25,8 +25,8 @@
 .score-board-box{
   width: 500px;
   border-radius: 60px;
-  border: solid rgb(76, 207, 216);
-  padding: 10px;
+  border: 10px solid rgb(76, 207, 216);
+  padding: 15px;
   margin: 30px;
   margin-left: auto;
   margin-right: auto;
