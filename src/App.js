@@ -135,6 +135,11 @@ const  App = () => {
             key={index}
             style={{backgroundColor: candyColor}}
             alt={candyColor}
+            data-id={index}
+            draggable={true}
+            onDragOver={(e) => e.preventDefault()}
+            onDragEnter={(e) => e.preventDefault()}
+            onDragLeave={(e) => e.preventDefault()}
           />
         ))}
 
