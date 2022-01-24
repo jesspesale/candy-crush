@@ -104,7 +104,13 @@ const  App = () => {
     }
 
     const dragEnd = (e) => {
-      console.log(e.target)
+      console.log("Drag end")
+
+      const squareBeingReplacedId = parseInt(squareBeingReplaced.getAttribute('data-id'))
+      const squareBeingDraggedId = parseInt(squareBeingDragged.getAttribute('data-id'))
+
+      console.log(squareBeingReplacedId, "replaced" )
+      console.log(squareBeingDraggedId, "Dragged")
     }
 
   const createBoard = () => {
