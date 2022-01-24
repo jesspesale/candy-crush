@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Scoreboard from "./componenets/Scoreboard"
 import blueMnm from "./images/blue_mnm.png"
 import redMnm from "./images/red_mnm.png"
 import orangeMnm from "./images/orange_mnm.png"
@@ -38,7 +39,7 @@ const  App = () => {
       }
     }
   }
-  console.log(score)
+
 
     const checkForRowOfFour = () => {
       for(let i = 0; i < 64; i++){
@@ -206,6 +207,7 @@ const  App = () => {
         ))}
 
       </div>
+      <Scoreboard score={score}/>
     </div>
   );
 }

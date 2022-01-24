@@ -10,3 +10,5 @@ const Scoreboard = ({score}) => {
         </div>
     )
 }
+
+export default Scoreboard
