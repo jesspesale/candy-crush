@@ -21,3 +21,15 @@
 .score-board{
   text-align: center;
 }
+
+.score-board-box{
+  width: 300px;
+  border-radius: 50px;
+  border: solid rgb(76, 207, 216);
+  padding: 10px;
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 26px;
+}
