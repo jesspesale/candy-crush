@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Scoreboard from "./Scoreboard"
 import blueMnm from "../images/blue_mnm.png"
 import redMnm from "../images/red_mnm.png"
 import orangeMnm from "../images/orange_mnm.png"
@@ -202,6 +203,7 @@ const Game = () => {
             onDragEnd={dragEnd}
           />
         ))} 
+        <Scoreboard score={score}/>
       </div>
   )
 
