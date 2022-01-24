@@ -1,10 +1,11 @@
-const Scoreboard = ({score}) => {
+const Scoreboard = ({score, turns}) => {
     return (
         <div className="score-board-box">
             <div className="score-board">
-                <h2>
+                <h3>
                     Your Score: {score}
-                </h2>
+                </h3>
+                   <h3>Number of Moves Made: {turns}</h3>
             </div>
         </div>
     )

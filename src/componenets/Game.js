@@ -23,6 +23,7 @@ const Game = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
   const [squareBeingDragged, setSquareBeingDragged] = useState(null)
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
+  const [turns, setTurns] = useState(0)
   const [score, setScore] = useState(0)
 
 
@@ -58,7 +59,7 @@ const Game = () => {
         }
       }
     }
-
+console.log(turns)
   const checkForColumnOfThree = () => {
     for(let i = 0; i <= 47; i++){
       const columnOfThree = [i, i + width, i + width * 2]
@@ -148,6 +149,7 @@ const Game = () => {
             (isARowOfThree || isARowOfFour || isAColumnOfFour || isAColumnOfThree)) {
             setSquareBeingDragged(null)
             setSquareBeingReplaced(null)
+             setTurns((turns) => turns + 1)
         } else {
             currentColorArrangement[squareBeingReplacedId] = squareBeingReplaced.getAttribute('src')
             currentColorArrangement[squareBeingDraggedId] = squareBeingDragged.getAttribute('src')
@@ -203,7 +205,8 @@ const Game = () => {
             onDragEnd={dragEnd}
           />
         ))} 
-        <Scoreboard score={score}/>
+        {turns}
+        <Scoreboard score={score} turns={turns}/>
       </div>
   )
 
