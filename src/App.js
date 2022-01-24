@@ -40,6 +40,22 @@ const  App = () => {
     }
   }
 
+    const checkForRowOfThree = () => {
+      for(let i = 0; i < 64; i++){
+        const rowOfThree = [i, i + 1, i + 2]
+        const decidedColor = currentColorArrangement[i]
+        const notValid = [6,7,14,15,22,23,30,31,38,39,46,47,54,55,63,64]
+
+        if(notValid.includes(i)) continue
+          //if in our loop we hit a not valid number just continue
+        
+        if(rowOfThree.every(square => currentColorArrangement[square] === decidedColor)){
+          // checking if 3 columns in a row are the same color as the first one checked
+            rowOfThree.forEach(square => currentColorArrangement[square] = " ")
+        }
+      }
+  }
+
 
   const createBoard = () => {
     const randomColorArrangement = []
@@ -63,11 +79,12 @@ const  App = () => {
     const timer = setInterval(() => {
       checkForColumnOfFour()
       checkForColumnOfThree()
+      checkForRowOfThree()
       setCurrentColorArrangement([...currentColorArrangement])
     }, 100)
     // run a new interval every 100ms
     return () => clearInterval(timer)
-  }, [checkForColumnOfFour, checkForColumnOfThree, currentColorArrangement])
+  }, [checkForColumnOfFour, checkForColumnOfThree, checkForRowOfThree, currentColorArrangement])
 
 
   console.log(currentColorArrangement)
