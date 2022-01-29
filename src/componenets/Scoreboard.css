@@ -3,10 +3,11 @@
   text-align: center;
   margin: 10px;
   font-weight: bold;
+  font-family: 'Shadows Into Light'
 }
 
 .score-board-box{
-  width: 450px;
+  width: 400px;
   border-radius: 60px;
   border: 7px solid rgb(76, 207, 216);
   padding: 5px;
@@ -18,7 +19,9 @@
 }
 
 .display_score {
-    margin: -8px;
+    margin: -5px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -32,3 +35,4 @@
     border-radius:4em;
     background-color: rgb(76, 207, 216);;
 }
+
