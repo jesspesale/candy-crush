@@ -3,23 +3,28 @@ import "./Scoreboard.css"
 const Scoreboard = ({score, turns}) => {
 
     const checkWin = () => {
-        if(score >= 50 && turns < 15){
+        if(score >= 200 && turns < 5){
             return (
                 <div>
                     <h2>You won!</h2>
-                    <button onClick={refreshPage}>Play Again!</button>
+                    <button className="refresh_button" onClick={refreshPage}>Try Again!</button>
                 </div>
             )
-        } else if (score < 50 && turns < 15){
+        } else if (score < 200 && turns < 5){
             return (
-                <div>
+                <div className="display_score">
                     <h3>Your Score: {score}</h3>
                     <h3># of Moves: {turns}</h3>
                 </div>
             )
         } else {
-            return <h2>Sorry, you lost ☹</h2>
-        }
+            return (
+                <div>
+                    <h2>Sorry, you lost ☹</h2> 
+                    <button className="refresh_button" onClick={refreshPage}>Play Again!</button>
+                </div>
+                )
+            }
     }
 
         const refreshPage = ()=>{
