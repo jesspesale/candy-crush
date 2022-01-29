@@ -1,5 +1,4 @@
 const Scoreboard = ({score, turns}) => {
-    // console.log(score)
 
     const checkWin = () => {
         if(score >= 200 && turns < 5){
