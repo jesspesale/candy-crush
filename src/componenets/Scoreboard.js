@@ -1,13 +1,19 @@
 const Scoreboard = ({score, turns}) => {
 
     const checkWin = () => {
-        if(score >= 200 && turns < 5){
-            return <h2>You won!</h2>
-        } else if (score < 200 && turns < 5){
+        if(score >= 50 && turns < 15){
+            // return <h2>You won!</h2> 
+            return (
+                <div>
+                    <h2>You won!</h2>
+                    <button onClick={refreshPage}>Play Again</button>
+                </div>
+            )
+        } else if (score < 50 && turns < 15){
             return (
                 <div>
                     <h3>Your Score: {score}</h3>
-                    <h3>Number of Moves Made: {turns}</h3>
+                    <h3># of Moves: {turns}</h3>
                 </div>
             )
         } else {
@@ -15,10 +21,15 @@ const Scoreboard = ({score, turns}) => {
         }
     }
 
+        const refreshPage = ()=>{
+            window.location.reload();
+        }
+
     return (
         <div className="score-board-box">
             <div className="score-board">
                 {checkWin()}
+                {/* <button onClick={refreshPage}>Play Again</button> */}
             </div>
         </div>
     )

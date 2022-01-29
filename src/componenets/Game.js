@@ -189,6 +189,7 @@ const Game = () => {
   }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
 
   return (
+    <div>
       <div className="game">
          {currentColorArrangement.map((candyColor, index) => (
           <img
@@ -206,8 +207,10 @@ const Game = () => {
           />
         ))} 
         {/* {console.log(score)} */}
-        <Scoreboard score={score} turns={turns}/>
       </div>
+        <br></br>
+        <Scoreboard score={score} turns={turns}/>
+    </div>
   )
 
 }
