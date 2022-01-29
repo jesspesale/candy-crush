@@ -4,9 +4,9 @@ const Scoreboard = ({score, turns}) => {
         if(score >= 50 && turns < 15){
             // return <h2>You won!</h2> 
             return (
-                <div>
+                <div className="text_display">
                     <h2>You won!</h2>
-                    <button onClick={refreshPage}>Play Again</button>
+                    <button onClick={refreshPage}>Play Again!</button>
                 </div>
             )
         } else if (score < 50 && turns < 15){

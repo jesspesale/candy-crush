@@ -7,6 +7,7 @@ import yellowMnm from "../images/yellow_mnm.png"
 import pinkMnm from "../images/pink_mnm.png"
 import greenMnm from "../images/green_mnm.png"
 import blank from "../images/blank.png"
+import '../App.css';
 
 const width = 8
 
