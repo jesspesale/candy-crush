@@ -1,0 +1,17 @@
+
+.score-board{
+  text-align: center;
+  margin: 10px;
+}
+
+.score-board-box{
+  width: 450px;
+  border-radius: 60px;
+  border: 7px solid rgb(76, 207, 216);
+  padding: 5px;
+  margin: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  font-size: 24px;
+}

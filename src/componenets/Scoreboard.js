@@ -1,10 +1,11 @@
+import "./Scoreboard.css"
+
 const Scoreboard = ({score, turns}) => {
 
     const checkWin = () => {
         if(score >= 50 && turns < 15){
-            // return <h2>You won!</h2> 
             return (
-                <div className="text_display">
+                <div>
                     <h2>You won!</h2>
                     <button onClick={refreshPage}>Play Again!</button>
                 </div>
