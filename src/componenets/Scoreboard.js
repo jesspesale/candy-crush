@@ -6,7 +6,7 @@ const Scoreboard = ({score, turns}) => {
         if(score >= 200 && turns < 5){
             return (
                 <div>
-                    <h2>You won!</h2>
+                    <h2>You won! You scored: {score}</h2>
                     <button className="refresh_button" onClick={refreshPage}>Try Again!</button>
                 </div>
             )
