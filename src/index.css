@@ -1,3 +1,6 @@
+*{
+  background-color: grey;
+}
 .app{
   padding: 30px;
   background-color: grey;
@@ -26,8 +29,8 @@
   width: 500px;
   border-radius: 60px;
   border: 10px solid rgb(76, 207, 216);
-  padding: 15px;
-  margin: 30px;
+  padding: 5px;
+  margin: 10px;
   margin-left: auto;
   margin-right: auto;
   color: black;
