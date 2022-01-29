@@ -12,10 +12,11 @@
 
 .game_name {
   text-shadow: 2px 2px 2px rgb(148, 227, 233);
-  font-size: 36px;
+  font-size: 46px;
   font-weight: bold;
   text-decoration: underline;
   font-family: 'Bebas Neue', cursive;
+  margin-bottom: -10px;
 }
 
 .game{
@@ -37,4 +38,6 @@
 
 .how_to_play{
     text-align: left;
+    font-size: 15px;
+    padding-bottom: 15px;
 }

@@ -7,7 +7,7 @@
 }
 
 .score-board-box{
-  width: 400px;
+  width: 450px;
   border-radius: 60px;
   border: 7px solid rgb(76, 207, 216);
   padding: 5px;
@@ -24,7 +24,9 @@
     font-weight: bold;
 }
 
-
+.score{
+    margin-bottom: -15px
+}
 .refresh_button {
     text-align:center;
     font-size: 15px;
