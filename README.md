@@ -1,10 +1,21 @@
-# Getting Started with Create React App
+# M&M Crush
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to M&M Crush! This is a simplified version of the game "Candy Crush" built with ReactJS and M&M's as the candy. This project is a great great way to learn some new React/JS skills as well as enhance my HTML/CSS abilities. 
 
-## Available Scripts
+To play the game you have to move the m&m's to either get three or four in a row. You can only move the m&m's one candy over either up, down, right or left (no diagnanol moves allowed). If you get 3 in a row it is +3 points and 4 in a row is +4 points. If you get to 55 points in 15 or less moves, you win! Under 55 points results in a loss, but you can play as many times as you'd like.
+
+### Deployment
+Here is a link to the deployed proejct:
+[M&M Crush](https://mnm-crush.netlify.app/)
+
+
+## Installation and Usage
 
 In the project directory, you can run:
+
+### `npm i`
+
+Run this command in your terminal to installs all the packages you need to get the project running correctly.
 
 ### `npm start`
 
@@ -14,57 +25,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Contributing
+1. Fork and clone this repo from https://github.com/jesspesale/mnm-crush
+2. Create your feature branch (git checkout -b feature/fooBar)
+3. Commit your changes (git commit -am ‘Add some fooBar’)
+4. Push to the branch (git push origin feature/fooBar)
+5. Create a new Pull Request
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Documentation
+Documentation for React lives at: https://reactjs.org/docs/getting-started.html
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### License
+This web app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
