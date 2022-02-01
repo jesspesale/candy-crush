@@ -21,7 +21,7 @@ const  App = () => {
         } else if (score < 500 && turns >= 5){
             return (
                 <div className="display_score">
-                   <Loser />
+                   <Loser score={score} turns={turns} />
                 </div>
             )
         } else {
