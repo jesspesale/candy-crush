@@ -1,7 +1,13 @@
 import Game from "./componenets/Game"
 import './App.css';
+import { useState } from "react";
 
 const  App = () => {
+
+  const [turns, setTurns] = useState(0)
+  const [score, setScore] = useState(0)
+
+  console.log(score)
 
   return (
     <div className="app">
@@ -10,7 +16,7 @@ const  App = () => {
           <h2>You must score at least 50 points in under 15 moves to win</h2>
           <h3></h3>
       </div>
-      <Game /> 
+      <Game turns={turns} score={score} setScore={setScore} setTurns={setTurns}/> 
     </div>
   );
 }

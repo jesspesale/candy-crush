@@ -20,12 +20,12 @@ const candyColors = [
   greenMnm
 ]
 
-const Game = () => {
+const Game = ({score, turns, setTurns, setScore}) => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
   const [squareBeingDragged, setSquareBeingDragged] = useState(null)
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
-  const [turns, setTurns] = useState(0)
-  const [score, setScore] = useState(0)
+  // const [turns, setTurns] = useState(0)
+  // const [score, setScore] = useState(0)
 
 
   const checkForColumnOfFour = () => {
@@ -123,7 +123,6 @@ const Game = () => {
     }
 
     const dragEnd = (e) => {
-      console.log("Drag end")
 
       const squareBeingReplacedId = parseInt(squareBeingReplaced.getAttribute('data-id'))
       const squareBeingDraggedId = parseInt(squareBeingDragged.getAttribute('data-id'))
