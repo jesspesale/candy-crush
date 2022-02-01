@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import Scoreboard from "./Scoreboard"
 import blueMnm from "../images/blue_mnm.png"
 import redMnm from "../images/red_mnm.png"
 import orangeMnm from "../images/orange_mnm.png"
@@ -24,9 +23,6 @@ const Game = ({score, turns, setTurns, setScore}) => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
   const [squareBeingDragged, setSquareBeingDragged] = useState(null)
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
-  // const [turns, setTurns] = useState(0)
-  // const [score, setScore] = useState(0)
-
 
   const checkForColumnOfFour = () => {
     for(let i = 0; i <= 39; i++){
@@ -206,10 +202,8 @@ const Game = ({score, turns, setTurns, setScore}) => {
             onDragEnd={dragEnd}
           />
         ))} 
-        {/* {console.log(score)} */}
       </div>
         <br></br>
-        {/* <Scoreboard score={score} turns={turns}/> */}
     </div>
   )
 
