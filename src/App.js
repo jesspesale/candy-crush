@@ -2,7 +2,7 @@ import Game from "./componenets/Game"
 import './App.css';
 import { useState } from "react";
 import Scoreboard from "./componenets/Scoreboard";
-import Winner from "./componenets/Winner";
+import Winner from "./componenets/Winner/Winner";
 
 const  App = () => {
 
