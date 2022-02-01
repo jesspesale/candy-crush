@@ -2,6 +2,7 @@ import Game from "./componenets/Game"
 import './App.css';
 import { useState } from "react";
 import Scoreboard from "./componenets/Scoreboard";
+import Winner from "./componenets/Winner";
 
 const  App = () => {
 
@@ -13,7 +14,7 @@ const  App = () => {
         if(score >= 50 && turns < 10){
             return (
                 <div>
-                    <h2>You won with a score of: {score}</h2>
+                    <Winner score={score} turns={turns}  />
                 </div>
             )
         } else if (score < 50 && turns >= 10){
