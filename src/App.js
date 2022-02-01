@@ -12,13 +12,13 @@ const  App = () => {
 
 
       const checkWin = () => {
-        if(score >= 500 && turns < 5){
+        if(score >= 50 && turns < 10){
             return (
                 <div>
                     <Winner score={score} turns={turns}  />
                 </div>
             )
-        } else if (score < 500 && turns >= 5){
+        } else if (score < 50 && turns >= 10){
             return (
                 <div className="display_score">
                    <Loser score={score} turns={turns} />
@@ -29,7 +29,7 @@ const  App = () => {
                 <div>
                   <h1 className="game_name">Welcome to M&M Crush!</h1>
                   <div className="how_to_play">
-                      <h2>You must score at least 50 points in under 15 moves to win</h2>
+                      <h2>You must score at least 50 points in under 10 moves to win</h2>
                       <h3></h3>
                   </div>
                   <Game 
