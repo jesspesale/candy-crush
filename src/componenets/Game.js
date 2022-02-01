@@ -209,7 +209,7 @@ const Game = ({score, turns, setTurns, setScore}) => {
         {/* {console.log(score)} */}
       </div>
         <br></br>
-        <Scoreboard score={score} turns={turns}/>
+        {/* <Scoreboard score={score} turns={turns}/> */}
     </div>
   )
 

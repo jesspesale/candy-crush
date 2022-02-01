@@ -1,6 +1,7 @@
 import Game from "./componenets/Game"
 import './App.css';
 import { useState } from "react";
+import Scoreboard from "./componenets/Scoreboard";
 
 const  App = () => {
 
@@ -17,6 +18,7 @@ const  App = () => {
           <h3></h3>
       </div>
       <Game turns={turns} score={score} setScore={setScore} setTurns={setTurns}/> 
+       <Scoreboard score={score} turns={turns}/>
     </div>
   );
 }
