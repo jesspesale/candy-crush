@@ -9,9 +9,12 @@ const Winner = ({score, turns}) => {
     return (
         <div>
             <div className="wrapper">
-                <h2>You won with a score of {score}</h2>
-                You won with a score of {score}
-                 in {turns} moves
+                <h2 className="winner_box">
+                    <h1>Congrats you won!</h1>
+                    <h2><strong>Your Score:</strong> {score} </h2>
+                    <h2><strong># of Moves:</strong>  {turns} </h2>
+                </h2>
+                <button className="glow-on-hover" onClick={() => refreshPage()}>Click to Play Again</button>
             </div>
         </div>
     )
